@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
 
     void SpawnCoin()
     {
+        if (!GameManager.Instance.NormalCoinsNeeded) return;
         if (transform.childCount >= maxCoins) return;
         float x = Random.Range(-area, area);
         float z = Random.Range(-area, area);
